@@ -1,2 +1,3 @@
 
-Ready to ship templates to run Application in Docker.
+
+**Ready to ship templates to run Applications in Docker.**
