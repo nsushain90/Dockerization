@@ -1,0 +1,16 @@
+
+FROM ubuntu:16.04
+MAINTAINER Sushain Nadagoundla <sushain.nadagoundla@sjsu.edu>
+
+RUN apt-get update && apt-get install -y \
+	software-properties-common \
+	--no-install-recommends && \
+	add-apt-repository ppa:yubico/stable && \
+	apt-get update && \
+	apt-get install -y \
+	python-setuptools \
+	usbutils \
+	yubikey-neo-manager \
+	&& rm -rf /var/lib/apt/lists/*
+
+ENTRYPOINT	[ "neoman" ]
